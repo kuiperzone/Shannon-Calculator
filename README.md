@@ -12,6 +12,8 @@ for Windows. In the case of the latter, unzip the file and run the `ShannonCalcu
 
 [**DOWNLOAD RELEASE**](https://github.com/KuiperZone/Shannon-Calculator/releases/latest)
 
+Don't forget to set the "Execute" permission for AppImage on Linux.
+
 For latest information, see: https://kuiper.zone/shannon-calculator-avalonia
 
 ## Shannon Information ##
