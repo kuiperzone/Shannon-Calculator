@@ -1,0 +1,23 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="KuiperZone.App">
+    <Application.Styles>
+
+        <!-- Style order must match expected in App class -->
+        <FluentTheme Mode="Dark"/>
+        <Style Selector="Window">
+            <!-- Dark override -->
+            <Setter Property="Background" Value="#303030"/>
+        </Style>
+        <FluentTheme Mode="Light"/>
+
+        <Style Selector="Window">
+            <!-- Light override -->
+        </Style>
+
+
+        <!-- Additional styles can be added -->
+
+    </Application.Styles>
+
+</Application>

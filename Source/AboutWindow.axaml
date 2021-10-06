@@ -1,0 +1,23 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        CanResize="false"
+        WindowStartupLocation="CenterOwner"
+        Width="300"
+        Height="320"
+        x:Class="KuiperZone.AboutWindow"
+        Title="About...">
+    <Grid RowDefinitions="Auto 6 2* 6 Auto 1* Auto 6 Auto 1* Auto" Margin="12 30 12 12">
+      <TextBlock Name="title" Grid.Row="0" TextAlignment="Center" FontSize="18" FontWeight="Bold"/>
+
+      <Image Grid.Row="2" Source="/Assets/dice.png" Stretch="Uniform"/>
+
+      <TextBlock Name="version" Grid.Row="4" TextAlignment="Center" FontSize="14" FontWeight="Bold"/>
+      <TextBlock Name="author" Grid.Row="6" TextAlignment="Center"/>
+      <TextBlock Grid.Row="8" TextAlignment="Center">License: GPLv3</TextBlock>
+
+      <Button Grid.Row="10" Content="OK" MinWidth="60" HorizontalAlignment="Right" HorizontalContentAlignment="Center" IsDefault="true" IsCancel="true" Click="OnCloseClick"/>
+    </Grid>
+  </Window>

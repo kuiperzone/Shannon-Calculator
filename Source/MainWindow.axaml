@@ -1,0 +1,77 @@
+<Window xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="550"
+    Width="600"
+    Height="650"
+    MinWidth="500"
+    MinHeight="500"
+    x:Class="KuiperZone.MainWindow"
+    Title="Shannon Calculator"
+    Icon="/Assets/app.png"
+    WindowStartupLocation="CenterScreen">
+
+    <Grid ColumnDefinitions="*" RowDefinitions="Auto 6 * 6 Auto 20 Auto 12 Auto 30 Auto 6 120 6 Auto" Margin="12">
+
+        <TextBlock Grid.Row="0" Text="Input Text"/>
+
+        <TextBox Name="inputBox" Grid.Row="2"
+            VerticalAlignment="Stretch" Watermark="Enter Text"
+            FontFamily="monospace" AcceptsReturn="True" TextWrapping="Wrap"/>
+
+        <Grid Grid.Row="4" ColumnDefinitions="Auto 6 Auto 6 Auto * Auto">
+            <Button Content="Open Text" Grid.Column="0" HorizontalContentAlignment="Center"
+                ToolTip.Tip="Imports file as text" MinWidth="60" Click="OnOpenTextClick"/>
+            <Button Content="Open Binary" Grid.Column="2" HorizontalContentAlignment="Center"
+                ToolTip.Tip="Imports file as raw bytes" MinWidth="60" Click="OnOpenBinaryClick"/>
+            <Button Content="Clear" Grid.Column="4" HorizontalContentAlignment="Center" MinWidth="60" Click="OnClearClick"/>
+
+            <ToggleButton Grid.Column="6" IsChecked="true" Content="Wrap" Click="OnWrapClick" />
+        </Grid>
+
+        <Grid Grid.Row="6" ColumnDefinitions="Auto 6 Auto 6 Auto * Auto 6 Auto 6 Auto" RowDefinitions="Auto 6 Auto">
+
+            <TextBlock Grid.Column="6" Grid.Row="0" Text="Insert" />
+            <NumericUpDown Name="countNumeric" Grid.Column="6" Grid.Row="2" Value="10" Increment="10" Minimum="1" Maximum="1024" />
+            <Button Name="coinsButton" Content="Coins" Grid.Column="8" Grid.Row="2" HorizontalContentAlignment="Center"
+                ToolTip.Tip="Inserts random coin flips" MinWidth="60" Click="OnCoinsClick"/>
+            <Button Name="diceButton" Content="Dice" Grid.Column="10" Grid.Row="2" HorizontalContentAlignment="Center"
+            ToolTip.Tip="Inserts random values [1, 6]" MinWidth="60" Click="OnDiceClick"/>
+
+            <TextBlock Grid.Column="0" Grid.Row="0" Text="Base" />
+            <ToggleButton Name="natsButton" Grid.Column="0" Grid.Row="2" IsChecked="false" Content="Nats" Click="OnNatsClick"
+                ToolTip.Tip="Calculate in nats (natural log)" />
+            <NumericUpDown Name="baseNumeric" Grid.Column="2" Grid.Row="2" Value="2" Increment="1" Minimum="2" Maximum="255"
+                ToolTip.Tip="Calculate in given base (default is 2)" />
+        </Grid>
+
+        <Grid Grid.Row="8" ColumnDefinitions="Auto 6 Auto * Auto" RowDefinitions="Auto Auto">
+            <CheckBox Name="metricCheck" Grid.Column="0" Grid.Row="0" Content="Metric Entroy"
+                ToolTip.Tip="Divides the result by the message length"/>
+            <CheckBox Name="ignoreCaseCheck" Grid.Column="2" Grid.Row="0" Content="Ignore Case"/>
+            <CheckBox Name="ignoreSpaceCheck" Grid.Column="0" Grid.Row="1" Content="Ignore Spaces" Click="OnSpaceClick"
+                ToolTip.Tip="Ignores spaces including line ends"/>
+            <CheckBox Name="consecSpaceCheck" Grid.Column="2" Grid.Row="1" Content="Ignore Consecutive Spaces"
+                ToolTip.Tip="Ignores consecutive spaces only"/>
+            <Button Content="Calculate" Grid.Column="4" Grid.Row="1" FontWeight="Bold"
+                HorizontalContentAlignment="Center" MinWidth="60" Click="OnCalculateClick"/>
+        </Grid>
+
+        <TextBlock Grid.Row="10" Text="Result"/>
+
+        <TextBox Name="resultBox" Grid.Row="12" VerticalAlignment="Stretch"
+            FontFamily="monospace" AcceptsReturn="True" TextWrapping="NoWrap" IsReadOnly="true"/>
+
+        <Grid Grid.Row="14" ColumnDefinitions="Auto * Auto 6 Auto" >
+            <TextBlock Name="linkText" Grid.Column="0" Text="https://kuiper.zone" VerticalAlignment="Center"
+                Foreground="#1d8da3" Cursor="Hand"/>
+
+            <ToggleButton Name="darkButton" Grid.Column="2" HorizontalContentAlignment="Center"
+                Content="Dark" Click="OnThemeClick"/>
+
+            <Button Name="aboutButton" Content="About" Grid.Column="4" HorizontalContentAlignment="Center"
+                MinWidth="60" Click="OnAboutClick"/>
+        </Grid>
+    </Grid>
+</Window>
