@@ -9,7 +9,7 @@ It is written in C# using the [Avalonia XAML Framework](https://avaloniaui.net/)
 
 Shannon Calculator is available as AppImage and Flatpak for Linux.
 
-[**DOWNLOAD RELEASE**](https://github.com/KuiperZone/Shannon-Calculator/releases/latest)
+[**DOWNLOAD LATEST RELEASE**](https://github.com/KuiperZone/Shannon-Calculator/releases/latest)
 
 Don't forget to set the "Execute" permission for AppImage on Linux. On Windows, download the zip file, unzip it and
 run `ShannonCalculator.exe`.
