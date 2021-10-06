@@ -7,12 +7,12 @@ of a message text or file byte data.
 
 It is written in C# using the [Avalonia XAML Framework](https://avaloniaui.net/), and is licensed under GPLv3.
 
-Shannon Calculator is available as AppImage and Flatpak for Linux. It is also available as a simple zip file
-for Windows. In the case of the latter, unzip the file and run the `ShannonCalculator.exe` file.
+Shannon Calculator is available as AppImage and Flatpak for Linux.
 
 [**DOWNLOAD RELEASE**](https://github.com/KuiperZone/Shannon-Calculator/releases/latest)
 
-Don't forget to set the "Execute" permission for AppImage on Linux.
+Don't forget to set the "Execute" permission for AppImage on Linux. On Windows, download the zip file, unzip it and
+run `ShannonCalculator.exe`.
 
 For latest information, see: https://kuiper.zone/shannon-calculator-avalonia
 
